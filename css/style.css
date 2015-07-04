@@ -64,3 +64,17 @@ nav a {
 nav a:hover {
   border-bottom-color: #ffffff;
 }
+main {
+  max-width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+main h1 {
+  margin: 54px 0 0 32px;
+  color: #414752;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: top;
+}
