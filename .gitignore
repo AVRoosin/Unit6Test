@@ -41,3 +41,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.name
+.idea/encodings.xml
+.idea/modules.xml
+*.xml
+Examples/Pass-Web-Layout-003-2-1.jpg
+*.iml
+Examples/Pass-Web-Layout-003-2-2.jpg
+Examples/Pass-Web-Layout-003-2-4.jpg
+Examples/Pass-Web-Layout-003-2-3.jpg
