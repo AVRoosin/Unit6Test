@@ -1,0 +1,35 @@
+util.print: Use console.log instead
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+header div img {
+  margin: 9px 0px 9px 32px;
+}
+header div h2 {
+  margin: 20px 19px;
+}
+header div * {
+  color: #414752;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: top;
+}
+header div {
+  height: 72px;
+}
+div {
+  max-width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+body {
+  background-color: #f9f9f9;
+}
+nav {
+  background-color: #2699d1;
+  height: 48px;
+}
