@@ -8,7 +8,7 @@ header div img {
   margin: 9px 0px 9px 32px;
 }
 header div h2 {
-  margin: 20px 19px;
+  margin: 20px 15px;
 }
 header div * {
   color: #414752;
@@ -32,4 +32,35 @@ body {
 nav {
   background-color: #2699d1;
   height: 48px;
+  max-width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  text-align: left;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  margin-left: 32px;
+}
+nav li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  height: 48px;
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 43px;
+  margin-top: 4px;
+}
+nav a {
+  text-decoration: none;
+  color: #f9f9f9;
+  display: block;
+  border-bottom: 4px solid #2699d1;
+  transition: 0.3s border-bottom;
+}
+nav a:hover {
+  border-bottom-color: #ffffff;
 }
