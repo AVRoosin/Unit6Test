@@ -4,6 +4,9 @@ util.print: Use console.log instead
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+header {
+  border-bottom: 1px solid #a0a3a8;
+}
 header div img {
   margin: 9px 0px 9px 32px;
 }
@@ -30,6 +33,7 @@ body {
   background-color: #f9f9f9;
 }
 .firstPage {
+  display: none;
   width: 100%;
   transition: 10s height;
 }
@@ -133,5 +137,6 @@ main {
   word-spacing: 3px;
 }
 .secondPage {
-  display: none;
+  display: block;
+  margin: 0 240px;
 }

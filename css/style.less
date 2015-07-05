@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+header {
+  border-bottom: 1px solid @description-font-color;
+}
+
 header div img {
   margin: 9px 0px 9px 32px;
 }
@@ -45,6 +49,7 @@ body {
 }
 
 .firstPage{
+  display: none;
   width:100%;
   transition: 10s height;
 }
@@ -164,5 +169,6 @@ main {
 }
 
 .secondPage{
-  display: none;
+  display: block;
+  margin: 0 240px;
 }
