@@ -79,7 +79,7 @@ main {
 .container {
   margin-left: 16px;
   display: table;
-  border-spacing: 16px 8px  ;
+  border-spacing: 16px 8px;
 }
 .passItem {
   max-width: 222px;

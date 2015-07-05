@@ -2,6 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="./lib/ejs.js"></script>
+    <script type="text/javascript" src="./lib/jquery-1.11.3.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300&subset=cyrillic,latin' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -24,49 +26,38 @@
 </nav>
 <main>
     <h1>Тип пропуска</h1>
-
-    <div class="container">
-        <div class="passItem">
-            <div class="passItemImage">
-                <img src="images/type1.png"></div>
-            <div class="passItemHeader">
-                <span>Посетители</span></div>
-
-            <div class="passItemText">Пропуска для посещения одним человеком или группой лиц без въезда на личном
-                транспорте.
-            </div>
-        </div>
-        <div class="passItem">
-            <div class="passItemImage">
-                <img src="images/type2.png"></div>
-            <div class="passItemHeader">
-                <span>Посетители и Автомобили</span></div>
-
-            <div class="passItemText">Пропуска для посещения одним человеком или группой лиц с въездом одного или
-                нескольких
-                автомобилей.
-            </div>
-        </div>
-        <div class="passItem">
-            <div class="passItemImage">
-                <img src="images/type3.png"></div>
-            <div class="passItemHeader">
-                <span>Курьерская доставка</span></div>
-
-            <div class="passItemText">Пропуска для курьерских служб на транспорте. Нужно указать только номер автомобиля
-                и компанию.
-            </div>
-        </div>
-        <div class="passItem">
-            <div class="passItemImage">
-                <img src="images/type4.png"></div>
-            <div class="passItemHeader">
-                <span>Ввоз и вывоз имущества</span></div>
-
-            <div class="passItemText">Пропуска для осуществления ввоза или вывоза материального имущества через КПП.
-            </div>
-        </div>
-    </div>
+    <div class="container"></div>
 </main>
+<script type="text/javascript">
+    function codeAddress() {
+        var data = [
+                {
+                    pictureName: "type1.png",
+                    passItemHeader: "Посетители",
+                    passItemDescription: "Пропуска для посещения одним человеком или группой лиц без въезда на личном транспорте."
+                },
+                {
+                    pictureName: "type2.png",
+                    passItemHeader: "Посетители и Автомобили",
+                    passItemDescription: "Пропуска для посещения одним человеком или группой лиц с въездом одного или нескольких автомобилей."
+                },
+                {
+                    pictureName: "type3.png",
+                    passItemHeader: "Курьерская доставка",
+                    passItemDescription: "Пропуска для курьерских служб на транспорте. Нужно указать только номер автомобиля и компанию."
+                },
+                {
+                    pictureName: "type4.png",
+                    passItemHeader: "Ввоз и вывоз имущества",
+                    passItemDescription: "Пропуска для осуществления ввоза или вывоза материального имущества через КПП."
+                }
+        ];
+        for (var i = 0; i < data.length; i++) {
+            var html = new EJS({url: 'header.ejs'}).render(data[i]);
+            $(".container").append(html);
+        }
+    }
+    window.onload = codeAddress;
+</script>
 </body>
 </html>
