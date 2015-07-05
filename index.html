@@ -99,9 +99,8 @@
         });
         $(".addUserLink").click(function () {
             usersCount.count++;
-            $( ".addUserLink" ).remove();
             var html = new EJS({url: 'templates/userInfoForm.ejs'}).render(usersCount);
-            $(".userInfoContainer").append(html);
+            $(html).insertBefore(".addUserLink");
         });
     }
     window.onload = codeAddress;
