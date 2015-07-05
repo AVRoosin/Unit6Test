@@ -35,6 +35,24 @@
 <div class="secondPage">
     <main>
         <h1>Данные посетителей</h1>
+
+        <div class="userInfoContainer">
+            <div class="userInfo">
+                <div class="userInfoName">
+                    <div class="userInfoText">ФИО</div>
+                    <input type="text"></div>
+                <div class="userInfoPhone">
+                    <div class="userInfoText">Телефон</div>
+                    <input type="text"></div>
+                <div class="userInfoEmail">
+                    <div class="userInfoText">Почта</div>
+                    <input type="text"></div>
+                <div class="userInfoCompany">
+                    <div class="userInfoText">Компания посетителя</div>
+                    <input type="text"></div>
+                <hr/>
+            </div>
+        </div>
     </main>
 </div>
 <script type="text/javascript">
@@ -70,8 +88,8 @@
             $(".container").append(html);
         }
         $("#item1").click(function () {
-            $(".firstPage").css( "display", "none" );
-            $(".secondPage").css( "display", "block" );
+            $(".firstPage").css("display", "none");
+            $(".secondPage").css("display", "block");
         });
     }
     window.onload = codeAddress;
