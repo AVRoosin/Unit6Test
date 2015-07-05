@@ -61,7 +61,7 @@ body {
 }
 
 .firstPage {
-  display: none;
+  display: block;
   width: 100%;
   transition: 10s height;
 }
@@ -82,7 +82,7 @@ nav ul {
 }
 
 nav li {
-  .mainFont(400, @main-background-color, 14px);
+
   line-height: 40px;
   height: 48px;
   display: inline-block;;
@@ -90,6 +90,7 @@ nav li {
 }
 
 nav a {
+  .mainFont(400, @main-background-color, 14px);
   text-decoration: none;
   display: block;
   border-bottom: 3px solid @menu-background-color;
@@ -172,7 +173,7 @@ main {
 }
 
 .secondPage {
-  display: block;
+  display: none;
   margin-left: 240px;
 }
 

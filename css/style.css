@@ -33,7 +33,7 @@ body {
   background-color: #f9f9f9;
 }
 .firstPage {
-  display: none;
+  display: block;
   width: 100%;
   transition: 10s height;
 }
@@ -51,16 +51,16 @@ nav ul {
   height: 100%;
 }
 nav li {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #f9f9f9;
   line-height: 40px;
   height: 48px;
   display: inline-block;
   margin: 5px 51px 0 -8px;
 }
 nav a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f9f9f9;
   text-decoration: none;
   display: block;
   border-bottom: 3px solid #2699d1;
@@ -137,7 +137,7 @@ main {
   word-spacing: 3px;
 }
 .secondPage {
-  display: block;
+  display: none;
   margin-left: 240px;
 }
 .userInfoContainer {
