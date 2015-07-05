@@ -141,24 +141,25 @@ main {
   margin-left: 240px;
 }
 .userInfoContainer {
-  margin: 10px auto 0 32px;
+  margin: 8px 0 0 32px;
   background-color: #ffffff;
   border: 1px solid #d4d5d7;
   width: 462px;
 }
 .userInfo {
-  margin: 22px 20px 0 15px;
+  height: 286px;
+  margin: 24px 20px -23px 15px;
 }
 .userInfo input {
   width: 100%;
   height: 44px;
-  margin-top: 4px;
-  margin-bottom: 17px;
+  margin-top: 3px;
+  margin-bottom: 16px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #414752;
-  border: 1px solid #d4d5d7;
+  border: 2px solid #d4d5d7;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
@@ -172,20 +173,37 @@ main {
   color: #a0a3a8;
 }
 .userInfoPhone {
-  width: 204px;
+  width: 202px;
   display: inline-block;
 }
 .userInfoEmail {
-  width: 204px;
+  width: 202px;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 18px;
 }
 .userInfo hr {
   display: block;
   vertical-align: bottom;
-  width: 100%;
+  width: 432px;
   color: #d4d5d7;
 }
 .userInfoCompany input {
+  margin-bottom: 6px;
+}
+.addUserLink {
+  height: 24px;
+  line-height: 24px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  vertical-align: bottom;
   margin-bottom: 9px;
+  margin-top: 7px;
+}
+.addUserLink a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2498d1;
+  text-decoration: none;
 }
