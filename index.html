@@ -17,45 +17,62 @@
         <span>Личный кабинет</span>
     </div>
 </header>
-<nav>
-    <ul>
-        <li><a href="#">Заказ пропуска</a></li>
-        <li><a href="#">Действующие пропуска</a></li>
-        <li><a href="#">Архив</a></li>
-    </ul>
-</nav>
-<main>
-    <h1>Тип пропуска</h1>
-    <div class="container"></div>
-</main>
+<div class="firstPage">
+    <nav>
+        <ul>
+            <li><a href="#">Заказ пропуска</a></li>
+            <li><a href="#">Действующие пропуска</a></li>
+            <li><a href="#">Архив</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Тип пропуска</h1>
+
+        <div class="container"></div>
+    </main>
+</div>
+
+<div class="secondPage">
+    <main>
+        123123123
+    </main>
+</div>
 <script type="text/javascript">
     function codeAddress() {
         var data = [
-                {
-                    pictureName: "type1.png",
-                    passItemHeader: "Посетители",
-                    passItemDescription: "Пропуска для посещения одним человеком или группой лиц без въезда на личном транспорте."
-                },
-                {
-                    pictureName: "type2.png",
-                    passItemHeader: "Посетители и Автомобили",
-                    passItemDescription: "Пропуска для посещения одним человеком или группой лиц с въездом одного или нескольких автомобилей."
-                },
-                {
-                    pictureName: "type3.png",
-                    passItemHeader: "Курьерская доставка",
-                    passItemDescription: "Пропуска для курьерских служб на транспорте. Нужно указать только номер автомобиля и компанию."
-                },
-                {
-                    pictureName: "type4.png",
-                    passItemHeader: "Ввоз и вывоз имущества",
-                    passItemDescription: "Пропуска для осуществления ввоза или вывоза материального имущества через КПП."
-                }
+            {
+                id: "item1",
+                pictureName: "type1.png",
+                passItemHeader: "Посетители",
+                passItemDescription: "Пропуска для посещения одним человеком или группой лиц без въезда на личном транспорте."
+            },
+            {
+                id: "item2",
+                pictureName: "type2.png",
+                passItemHeader: "Посетители и Автомобили",
+                passItemDescription: "Пропуска для посещения одним человеком или группой лиц с въездом одного или нескольких автомобилей."
+            },
+            {
+                id: "item3",
+                pictureName: "type3.png",
+                passItemHeader: "Курьерская доставка",
+                passItemDescription: "Пропуска для курьерских служб на транспорте. Нужно указать только номер автомобиля и компанию."
+            },
+            {
+                id: "item4",
+                pictureName: "type4.png",
+                passItemHeader: "Ввоз и вывоз имущества",
+                passItemDescription: "Пропуска для осуществления ввоза или вывоза материального имущества через КПП."
+            }
         ];
         for (var i = 0; i < data.length; i++) {
             var html = new EJS({url: 'header.ejs'}).render(data[i]);
             $(".container").append(html);
         }
+        $("#item1").click(function () {
+            $(".firstPage").css( "display", "none" );
+            $(".secondPage").css( "display", "block" );
+        });
     }
     window.onload = codeAddress;
 </script>
