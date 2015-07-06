@@ -2,8 +2,11 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <script type="text/javascript" src="./lib/ejs.js"></script>
-    <script type="text/javascript" src="./lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="lib/js/ejs.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="lib/js/input-mask.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300&subset=cyrillic,latin' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -28,7 +31,7 @@
     <main>
         <h1>Тип пропуска</h1>
 
-        <div class="container"></div>
+        <div class="passItemsContainer"></div>
     </main>
 </div>
 
@@ -36,7 +39,7 @@
     <main>
         <h1>Данные посетителей</h1>
 
-        <div class="userInfoContainer">
+        <div class="userDataContainer">
             <div class="userInfo" id="user1">
                 <div class="userInfoName">
                     <div class="userInfoText">ФИО</div>
@@ -56,6 +59,41 @@
         </div>
         <h1>Дата</h1>
 
+        <div class="userDataContainer" id="dateContainer">
+            <div class="userInfo">
+                <div class="dateFromInfo">
+                    <div class="userInfoText">Начало действия</div>
+                    <input type="text"></div>
+
+                <div class="dateToInfo">
+                    <div class="userInfoText">Окончание действия</div>
+                    <input type="text" disabled></div>
+                <div class="btn-group" data-toggle="buttons">
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">Сегодня</button>
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">Завтра</button>
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">Послезавтра</button>
+                </div>
+                <div class="btn-group" data-toggle="buttons">
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">9 Июля, Чт</button>
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">10 Июля, Пт</button>
+                    <button class="btn btn-default">
+                        <input class="dateRoundButton" type="radio" name="options">11 Июля, Сб</button>
+                </div>
+                <hr id="afterDateHr">
+                <div class="daysAmountInput" id="daysAmountInput1">
+                    <input type="radio" id="radio-1" name="days"><label for="radio-1">На один день</label>
+                </div>
+                <div class="daysAmountInput" id="daysAmountInput2"><label>
+                    <input type="radio" id="radio-2" name="days"><label for="radio-2">На несколько дней</label>
+                </div>
+            </div>
+        </div>
+        <button id="submitButton">Продолжать</button>
     </main>
 </div>
 <script type="text/javascript">
@@ -91,7 +129,7 @@
         ];
         for (var i = 0; i < data.length; i++) {
             var html = new EJS({url: 'templates/header.ejs'}).render(data[i]);
-            $(".container").append(html);
+            $(".passItemsContainer").append(html);
         }
         $("#item1").click(function () {
             $(".firstPage").css("display", "none");
@@ -104,6 +142,17 @@
         });
     }
     window.onload = codeAddress;
+</script>
+<script>
+    $('.colors').radiosforbuttons();
+</script>
+<script>
+    $('.colors').radiosforbuttons({
+        group: true, // grouped buttons
+        vertical: true, // vertical mode
+        autowidth: true,
+        margin: 0 // space between buttons
+    });
 </script>
 </body>
 </html>
