@@ -414,31 +414,26 @@ main {
 }
 
 #afterDateHr {
+  color: @passItemBorderColor;
   margin-top: -1px;
 }
 
 .daysAmountInput {
   .reset-this;
-
+  margin-top:11px;
 }
 
 .daysAmountInput label {
   .reset-this;
-  .mainFont(400, @main-font-color, 18px);
-  margin: 8px;
+  .mainFont(600, @main-font-color, 16px);
 }
 
 .daysAmountInput input[type="radio"] {
   .reset-this;
-  width: 16px;
-  height: 16px;
-  padding: 20px 20px;
-  color: @referenceColor;
-  border: 1px solid @referenceColor;
 }
 
 #daysAmountInput1 {
-  width: 208px;
+  width: 168px;
   display: inline-block;
 }
 
@@ -448,7 +443,53 @@ main {
   margin-left: 12px;
 }
 
+.daysAmountInput .radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+.daysAmountInput .radio + label {
+  cursor: pointer;
+}
+.daysAmountInput .radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.daysAmountInput .radio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 40px;
+}
+.daysAmountInput .radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid @passItemBorderColor;
+  border-radius: 50%;
+  background: @passItemBackgroundColor;
+}
+.daysAmountInput .radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: @referenceColor;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all .2s;
+}
+.daysAmountInput .radio:checked + label:after {
+  opacity: 1;
+}
+
 #dateContainer {
+  margin-top:9px;
   height: 240px;
 }
 
