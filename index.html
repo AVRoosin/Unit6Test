@@ -40,19 +40,26 @@
         <h1>Данные посетителей</h1>
 
         <div class="userDataContainer">
-            <div class="userInfo" id="user1">
-                <div class="userInfoName">
-                    <div class="userInfoText">ФИО</div>
-                    <input type="text"></div>
-                <div class="userInfoPhone">
-                    <div class="userInfoText">Телефон</div>
-                    <input type="text"></div>
-                <div class="userInfoEmail">
-                    <div class="userInfoText">Почта</div>
-                    <input type="text"></div>
-                <div class="userInfoCompany">
-                    <div class="userInfoText">Компания посетителя</div>
-                    <input type="text"></div>
+            <div class="container" id="user1">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="userInfoText">ФИО</div>
+                        <input type="text"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="userInfoText">Телефон</div>
+                        <input type="text"></div>
+
+                    <div class="col-xs-6">
+                        <div class="userInfoText">Почта</div>
+                        <input type="text"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="userInfoText">Компания посетителя</div>
+                        <input type="text"></div>
+                </div>
                 <hr/>
             </div>
             <div class="addUserLink"><a href="#">Добавить ещё одного посетителя?</a></div>
@@ -60,43 +67,55 @@
         <h1>Дата</h1>
 
         <div class="userDataContainer" id="dateContainer">
-            <div class="userInfo">
-                <div class="dateFromInfo">
-                    <div class="userInfoText">Начало действия</div>
-                    <input type="text"></div>
-
-                <div class="dateToInfo">
-                    <div class="userInfoText">Окончание действия</div>
-                    <input type="text" disabled></div>
-                <div class="btn-group" data-toggle="buttons">
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options" checked>Сегодня
-                    </button>
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options">Завтра
-                    </button>
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options">Послезавтра
-                    </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="userInfoText">Начало действия</div>
+                        <input type="text"></div>
+                    <div class="col-xs-6">
+                        <div class="userInfoText">Окончание действия</div>
+                        <input type="text" disabled></div>
                 </div>
-                <div class="btn-group" data-toggle="buttons">
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options">9 Июля, Чт
-                    </button>
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options">10 Июля, Пт
-                    </button>
-                    <button class="btn btn-default">
-                        <input class="dateRoundButton" type="radio" name="options">11 Июля, Сб
-                    </button>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="btn-group" data-toggle="buttons">
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options" checked>Сегодня
+                            </button>
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options">Завтра
+                            </button>
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options">Послезавтра
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="btn-group" data-toggle="buttons">
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options">9 Июля, Чт
+                            </button>
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options">10 Июля, Пт
+                            </button>
+                            <button class="btn btn-default">
+                                <input class="dateRoundButton" type="radio" name="options">11 Июля, Сб
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <hr id="afterDateHr">
-                <div class="daysAmountInput" id="daysAmountInput1">
-                    <input type="radio" class="radio" id="radio-1" name="days"><label for="radio-1">На один день</label>
-                </div>
-                <div class="daysAmountInput" id="daysAmountInput2"><label>
-                    <input type="radio" class="radio" id="radio-2" name="days"><label for="radio-2">На несколько
-                    дней</label>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="daysAmountInput" id="daysAmountInput1">
+                            <input type="radio" class="radio" id="radio-1" name="days"><label for="radio-1">На один
+                            день</label>
+                        </div>
+                        <div class="daysAmountInput" id="daysAmountInput2">
+                            <input type="radio" class="radio" id="radio-2" name="days"><label for="radio-2">На несколько
+                            дней</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,22 +163,11 @@
         });
         $(".addUserLink").click(function () {
             usersCount.count++;
-            var html = new EJS({url: 'templates/userInfoForm.ejs'}).render(usersCount);
+            var html = new EJS({url: 'templates/userInfo.ejs'}).render(usersCount);
             $(html).insertBefore(".addUserLink");
         });
     }
     window.onload = codeAddress;
-</script>
-<script>
-    $('.colors').radiosforbuttons();
-</script>
-<script>
-    $('.colors').radiosforbuttons({
-        group: true, // grouped buttons
-        vertical: true, // vertical mode
-        autowidth: true,
-        margin: 0 // space between buttons
-    });
 </script>
 </body>
 </html>

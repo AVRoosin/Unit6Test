@@ -307,56 +307,60 @@ main {
 
 .secondPage {
   display: none;
-  margin-left: 240px;
+  width: 100%;
+}
+
+.secondPage h1 {
+  margin-left: 272px;
+  margin-top: 53px;
 }
 
 .userDataContainer {
-  margin: 8px 0 0 32px;
+  margin: 9px 288px 1px 272px;
   background-color: @passItemBackgroundColor;
   border: 1px solid @passItemBorderColor;
-  width: 464px;
 }
 
-.userInfo {
+.container {
+  margin:0;
+  margin-bottom: 4px;
+  padding: 24px 6px 0 7px;
   height: 284px;
-  margin: 25px 14px -22px 15px;
+  width: 100%;
 }
 
-.userInfo input {
+.container input {
   width: 100%;
   height: 49px;
   margin-top: 3px;
-  margin-bottom: 16px;
   .mainFont(600, @main-font-color, 16px);
   border: 2px solid @passItemBorderColor;
   .borderRadius(3px);
   text-indent: 5px;
+}
+.row{
+  margin:0;
+  padding:0;
+  margin-bottom: 17px;
+}
+.col-xs-12{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-xs-6{
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .userInfoText {
   .mainFont(400, @description-font-color, 14px);
 }
 
-.userInfoPhone {
-  width: 208px;
-  display: inline-block;
-}
-
-.userInfoEmail {
-  width: 208px;
-  display: inline-block;
-  margin-left: 12px;
-}
-
-.userInfo hr {
+.container hr {
   display: block;
   vertical-align: bottom;
-  width: 432px;
+  width: 434px;
   color: @passItemBorderColor;
-}
-
-.userInfoCompany input {
-  margin-bottom: 8px;
 }
 
 .addUserLink {
@@ -366,24 +370,13 @@ main {
   text-align: center;
   display: block;
   vertical-align: bottom;
-  margin-bottom: 9px;
-  margin-top: 7px;
+  margin-bottom: 8px;
+  margin-top: 10px;
 }
 
 .addUserLink a {
   .mainFont(600, @referenceColor, 12px);
   text-decoration: none;
-}
-
-.dateFromInfo {
-  width: 208px;
-  display: inline-block;
-}
-
-.dateToInfo {
-  width: 208px;
-  display: inline-block;
-  margin-left: 12px;
 }
 
 .btn-default {
@@ -415,12 +408,12 @@ main {
 
 #afterDateHr {
   color: @passItemBorderColor;
-  margin-top: -1px;
+  margin-top: -16px;
 }
 
 .daysAmountInput {
   .reset-this;
-  margin-top:11px;
+  margin-top: 8px;
 }
 
 .daysAmountInput label {
@@ -449,17 +442,21 @@ main {
   height: 17px;
   margin: 0 3px 0 0;
 }
+
 .daysAmountInput .radio + label {
   cursor: pointer;
 }
+
 .daysAmountInput .radio:not(checked) {
   position: absolute;
   opacity: 0;
 }
+
 .daysAmountInput .radio:not(checked) + label {
   position: relative;
   padding: 0 0 0 40px;
 }
+
 .daysAmountInput .radio:not(checked) + label:before {
   content: '';
   position: absolute;
@@ -471,6 +468,7 @@ main {
   border-radius: 50%;
   background: @passItemBackgroundColor;
 }
+
 .daysAmountInput .radio:not(checked) + label:after {
   content: '';
   position: absolute;
@@ -480,24 +478,26 @@ main {
   height: 8px;
   border-radius: 50%;
   background: @referenceColor;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
   opacity: 0;
   transition: all .2s;
 }
+
 .daysAmountInput .radio:checked + label:after {
   opacity: 1;
 }
 
 #dateContainer {
-  margin-top:9px;
+  margin-top: 9px;
   height: 240px;
 }
 
 #submitButton {
   display: block;
   height: 48px;
-  width: 304px;
-  margin: 64px 111px;
+  min-width: 304px;
+  max-width: 304px;
+  margin: 64px 368px 0 352px;
   background-color: @referenceColor;
   .mainFont(600, @passItemBackgroundColor, 16px);
 }
